@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="event-box">
+        <h1 class="events-title">EVENTS</h1>
+
+        <div class="event-content">
+            <mat-tab-group 
+            [(selectedIndex)]="selectedIndex"
+            headerPosition="below">
+                <mat-tab 
+                *ngFor="let content of contents"
+                [label]="content">
+                    <ng-container [ngTemplateOutlet]="eventCard"></ng-container>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>
+
+<ng-template #eventCard>
+    <mat-card class="event-card" appearance="outlined">
+        <mat-card-content>
+            <img mat-card-md-image src="https://material.angular.dev/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        </mat-card-content>
+    </mat-card>
+</ng-template>

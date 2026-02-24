@@ -7,20 +7,20 @@
     .sign-up {
         padding: 0px 18px 0px;
         cursor: pointer;
-        color: #666;
+        color: white;
         margin: auto;
-        font-size: large;
+        font-size: larger;
     }
 
     .sign-up:hover {
-        color: red;
+        color: rgb(255, 67, 67);
         font-weight: 500;
     }
 
     .login {
         @include mat.button-overrides((
-            outlined-outline-color: rgb(255, 67, 67),
-            outlined-label-text-color: rgb(255, 67, 67),
+            outlined-outline-color: white,
+            outlined-label-text-color: white,
             outlined-ripple-color: rgb(255, 67, 67),
             outlined-state-layer-color: rgb(255, 67, 67),
             outlined-outline-width: 4px,

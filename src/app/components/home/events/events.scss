@@ -1,0 +1,54 @@
+@use '@angular/material' as mat;
+
+.container {
+    width: 100%;
+    height: auto;
+
+    .event-box {
+        padding: 30px 8% 20px;
+        background: 
+            linear-gradient(to right, rgba(46, 46, 46, 0.801), rgba(24, 24, 24, 0.801)),
+            url("/assets/elevate-events-background.jpg") center/cover no-repeat;
+        background-size: cover;
+
+        .events-title {
+            text-align: center;
+            font-size: 38px;
+            color: rgb(255, 255, 255);
+            letter-spacing: 6px;
+        }
+
+        .event-content {
+            @include mat.tabs-overrides((
+                divider-color: rgba(0, 0, 0, 0),
+                active-focus-indicator-color: white,
+                active-focus-label-text-color: white,
+                active-indicator-height: 5px,
+                active-indicator-color: white,
+                active-label-text-color: white,
+                active-hover-label-text-color: white,
+                active-hover-indicator-color: red,
+                inactive-hover-label-text-color: white
+            ));
+        }
+
+        .event-card {
+            border-radius: 20px;
+            margin-bottom: 26px;
+            margin-left: auto;
+            margin-right: auto;
+
+            mat-card-content {
+                width: 96%;
+                margin-left: auto;
+                margin-right: auto;
+                img {
+                width: 100%;
+                height: 590px;
+                object-fit: fill;
+                border-radius: 20px;
+            }
+            }
+        }
+    }
+}
