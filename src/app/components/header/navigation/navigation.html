@@ -1,0 +1,9 @@
+<div class="container">
+    <div
+    class="tab" 
+    *ngFor="let tab of tabOptions"
+    [class.active]="tab.tabName === selectedTab"
+    (click)="selectTab(tab)">
+        {{ tab?.tabName }}
+    </div>
+</div>
